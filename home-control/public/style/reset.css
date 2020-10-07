@@ -1,0 +1,19 @@
+* ::before ::after{
+	box-sizing: border-box;
+}
+
+html{
+	height: 100vh;
+	background-color: rgb(246, 242, 242);
+}
+
+body{
+    margin: 0px;
+	padding: 0px;
+	
+	
+}
+ 
+img, video, iframe{
+	max-width: 100%;
+}

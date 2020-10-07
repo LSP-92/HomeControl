@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/nolan/64/monitor.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/init.css">
+    <title>HomeControl</title>
+</head>
+<body>
+    <header id="head">
+        <nav class="navbar">
+            <div class="logo">Home Control</div>
+            <div class="nav">
+                <a href="#head" target="_parent" ><span>Inicio</span></a>
+                <a href="./dev.html" target="_parent" ><span>Desarrollo</span></a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="buttons">
+
+            <div class="btn14">
+                <div class="button1">
+                    <img id = "channel1" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                    <p>Comedor</p>
+                    <button id="1%1">On</button>
+                    <button id="0%1">Off</button>
+                </div>
+
+                <div class="button2">
+                    <img id = "channel2" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                    <p>Cocina</p>
+                    <button id="1%2">On</button>
+                    <button id="0%2">Off</button>
+                </div>
+
+                <div class="button3">
+                    <img id = "channel3" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                    <p>Pasillo</p>
+                    <button id="1%3">On</button>
+                    <button id="0%3">Off</button>
+                </div>
+
+                <div class="button4">
+                    <img id = "channel4" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                    <p>Dormitorio</p>
+                    <button id="1%4">On</button>
+                    <button id="0%4">Off</button>
+                </div>
+            </div>
+            <div class="btn58">
+            <div class="button5">
+                <img id = "channel5" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                <p>Baño</p>
+                <button id="1%5">On</button>
+                <button id="0%5">Off</button>
+            </div>
+
+            <div class="button6">
+                <img id = "channel6" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                <p>Exterior entrada</p>
+                <button id="1%6">On</button>
+                <button id="0%6">Off</button>
+            </div>
+
+            <div class="button7">
+                <img id = "channel7" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                <p>Exterior Jardin</p>
+                <button id="1%7">On</button>
+                <button id="0%7">Off</button>
+            </div>
+
+            <div class="button8">
+                <img id = "channel8" src="./images/icons8-ceiling-light-64.png" alt="lamp">
+                <p>Despensa</p>
+                <button id="1%8">On</button>
+                <button id="0%8" >Off</button>
+            </div>
+            </div>
+        </div>        
+    </main>
+    
+    <footer class="footer">        
+        <h4 id="dev">
+            Developed by Luis Sanchez Prudencio
+        </h4>
+        <a href="https://github.com/LSP-92">Github</a>
+    </footer>
+</body>
+</html>

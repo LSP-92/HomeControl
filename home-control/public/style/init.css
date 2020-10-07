@@ -1,0 +1,105 @@
+#head{
+    height: 70px;
+    position: block;
+    width: 100%;
+    z-index: +99999999;
+    background-color: rgb(128, 128, 153);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 50px;
+    margin-left: 2rem;    
+    color: rgb(64, 64, 78);
+    text-shadow: -2px 2px 0 #000, 
+    2px 2px 0 #000, 
+    2px -2px 0 #000, 
+   -2px -2px 0 #000; 
+}
+.nav{
+    margin-right: 2rem;
+    padding-top: 22px;
+   
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(64, 64, 78);
+}
+
+.buttons{  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 15vh;
+
+}
+
+.buttons p{
+    color: rgb(64, 64, 78);
+    font-size: 19px;
+    font-weight: bold;
+    
+}
+.btn14{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn14 >*{
+    text-align: center;
+    margin: 2rem;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 1rem;
+    height: auto;
+    width: 150px;
+}
+
+.btn14 button{
+    font-size: medium;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.btn14 button:hover{
+    background-color: burlywood;
+}
+
+.btn58{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn58>*{
+    text-align: center;
+    margin: 2rem;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 1rem;
+    height: auto;
+    width: 150px;
+}
+
+.btn58 button{
+    font-size: medium;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.btn58 button:hover{
+    background-color: burlywood;
+}
+
+.footer{
+    margin-top: 7%;
+    text-align: center;
+}

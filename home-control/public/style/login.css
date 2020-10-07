@@ -1,0 +1,116 @@
+html{
+    background-image: url(../images/smart-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;        
+}
+
+
+
+.contacto h1{
+font-size: 35px;
+font-family: fantasy;
+vertical-align: middle;
+padding-right: 1rem;
+color:  rgb(64, 64, 78);
+text-shadow: 
+    -2px 2px 0 #000, 
+     2px 2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px -2px 0 #000; 
+}
+
+.init img{
+padding-top:15px ;
+height: 45px;
+width: 45px;
+}
+
+.contacto{
+background-color: rgb(22, 21, 21, 0.6);
+border-radius: 8px;
+width: 520px;
+height: 650px;    
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+
+ 
+}
+
+.contacto > h1{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 50px;
+color: rgb(64, 64, 78);
+padding: 1.5rem;
+text-align: center;
+}
+
+.form{
+display: flex;
+flex-direction: column;
+}
+
+
+
+.form label[for="email"], label[for="pass"]{
+display: block;
+padding: 1rem;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 22px;
+margin-bottom: 0.5rem;
+color: rgb(255, 255, 255);
+
+
+}
+
+
+.form input[type='email'], form input[type='password'] {
+border-radius: 5px;
+font-size: 22px;
+font-weight: bold;
+padding: 0.5rem;
+background-color: rgb(231, 226, 226);
+width: 87%;
+margin: auto;
+z-index: 9999999;   
+}
+
+.form input[type='submit']{
+font-size: 20px;
+font-weight: bold;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+padding: 0.8rem;
+border-radius: 10px;
+width: 87%;
+margin: auto;
+margin-top: 2.5rem;
+background-color: rgba(206, 142, 235, 0.952);
+
+
+}
+
+.under_form{
+padding-top: 2rem;
+display: inline-block;
+margin-left: auto;  
+margin-right: auto;     
+
+}
+
+.under_form label{
+padding: 1rem;
+font-size: 22px;
+color: white;
+margin-bottom: 0.5rem;
+}
+
+.under_form a{
+padding: 1rem;
+color: white;    
+text-decoration: none;
+font-size: 22px;    
+}
+
