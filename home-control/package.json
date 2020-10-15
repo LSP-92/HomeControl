@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "cross-env DEBUG=nodeapi:* PORT=3000 nodemon"
+    "dev": "DEBUG=nodeapi:* PORT=3000 nodemon",
+    "devLog": "node --trace-warnings ./bin/www"
   },
   "dependencies": {
     "chart.js": "^2.9.3",
@@ -12,9 +13,11 @@
     "debug": "~2.6.9",
     "ejs": "^3.1.5",
     "express": "~4.16.1",
+    "express-session": "^1.17.1",
     "helmet": "^4.1.0",
     "mongoose": "^5.10.3",
     "morgan": "~1.9.1",
+    "passport": "^0.4.1",
     "socket.io": "^2.3.0"
   }
 }

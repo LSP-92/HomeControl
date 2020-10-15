@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../javascripts/control.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/init.css">
+    <title>HomeControl - Control</title>
+</head>
+<body>
+    <header id="head">
+        <nav class="navbar">
+            <div class="logo">Home Control</div>
+            <div class="nav">
+                <a href="./singin" target="_parent" ><span>Nuevo Usuario</span></a>
+                <a href="#head" target="_parent" ><span>Salir</span></a>
+            </div>
+        </nav>
+    <main>
+        <div class="controlTemp">
+            <p>Alertas por tempreatura</p>
+            <p>Introduzca un valor minimo y maximo para recibir alertas</p>
+            <form action="/control/dataTemp" method="GET">
+                <input type="number" name="mxTemp" id="mxTemp">
+                <label for="mxTemp">Temperatura maxima</label>
+                <input type="number" name="mnTemp" id="mnTemp">
+                <label for="mnTemp">Temperatura minima</label>
+                <input type="button" id="btnSend" value="Enviar">
+            </form>
+        </div>
+        <div class="controlUser">
+            <p>Registro de usuarios</p>
+             <p class="nodisplay" id="userlog"></p>
+        </div>
+    </main>
+    </header>
+
+</body>
+</html>

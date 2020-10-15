@@ -1,5 +1,5 @@
-function main (){
-  let contador = 0
+
+export function renderChart (){
   Chart.platform.disableCSSInjection = true;
   const ctx = document.querySelector('#myChart').getContext('2d')
   const bton = document.querySelector('#reload')
@@ -35,34 +35,23 @@ function main (){
   bton.addEventListener('click', log)
   function log() {
     const time = new Date
-    addData(chart, time.toUTCString(), dataRam())
-    console.log('click')
-    console.log(chart.data.datasets[0].data)
-    setTimeout(log, 10000)
+    addData(chart, time.toUTCString(), 35)
+      /*setTimeout(log, 10000)*/
   }
 
   function addData(chart, label, data) {    
     chart.data.labels.push(label)
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(data)
-        contador ++
     })
+    console.log(chart.data.labels.length)
 
-    if (contador === 3){
-      chart.data.datasets[0].data.shift()
-      chart.data.labels.shift()
-      contador = 0
+    if (chart.data.labels.length === 8){
+      chart.data.datasets[0].data.splice(0, 1)
+      chart.data.labels.splice(0, 5)
     }
     
     chart.update();
   }
 
-
-
-  function dataRam() { // Genera numero aleatorios para pruebas 
-    const aleatorio = Math.round(Math.random()*10)
-    return aleatorio
-  }  
 }
-
-document.addEventListener('DOMContentLoaded', main)
