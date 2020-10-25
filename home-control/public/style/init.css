@@ -22,14 +22,20 @@
 .nav{
     margin-right: 2rem;
     padding-top: 22px;
+    display: inline-flex;
    
 }
-
-.nav a{
+.nav nav {
     text-decoration: none;
     font-size: 22px;
     color: rgb(64, 64, 78);
+    padding: .5rem;
 }
+
+.nav-item:hover{
+    cursor: pointer;
+}
+
 
 .buttons{  
     display: flex;

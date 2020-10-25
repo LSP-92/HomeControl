@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
+require('dotenv').config(); // cargar .env, ponerlo en process.env
+
 /**
  * Module dependencies.
  */

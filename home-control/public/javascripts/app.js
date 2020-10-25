@@ -10,26 +10,27 @@ function main() {
   const buttons = document.querySelector('.buttons')
   const innputBtn = [...buttons.querySelectorAll('.btn')]
 
+
   innputBtn.filter(item => {
-    item.addEventListener('click', sendData)
+    item.addEventListener('click', function(){sendData(item)})
   })
 
   function sendData(ev) {
-    socket.emit('relay', ev.target.id)
-    socket.on('request', (value) => {
-      changeState(value)
-    })
-  }
-
-  function changeState(value) {
-    console.log(value)
-    const flash = buttons.querySelector(`#channel${value[1]}`)
-    if (value[0]===1) {      
-      flash.src='../images/lightOn.png'
-    } else {
-      flash.src='../images/icons8-ceiling-light-64.png'
+    const img = ev.previousElementSibling
+    if(ev.value === 'On') {
+      img.previousElementSibling.setAttribute("src", "./images/lightOn.png");
     }
-    console.log(flash)
+    if(ev.value === 'Off') {
+      img.previousElementSibling.previousElementSibling.setAttribute("src", "./images/icons8-ceiling-light-64.png");
+    }
+    
+    try {
+      socket.emit('relay', ev.id)      
+    } catch (err){
+      console.dir(err)
+      alert('Error socket, vuelva a intentarlo más tarde')
+    }
+ 
   }
 }
 

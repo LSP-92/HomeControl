@@ -46,7 +46,7 @@ export function renderChart (){
     })
     console.log(chart.data.labels.length)
 
-    if (chart.data.labels.length === 8){
+    if (chart.data.labels.length === 7){
       chart.data.datasets[0].data.splice(0, 1)
       chart.data.labels.splice(0, 5)
     }

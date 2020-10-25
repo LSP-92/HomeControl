@@ -1,20 +1,25 @@
 'use strict';
 const express = require('express')
 const router = express.Router()
+const ValueTemp = require('../models/valueTemp')
 
 router.get('/', function(req, res, next) {
   res.render('control')
 })
 
-router.get('/dataTemp', function(req, res, next) {
-  const tempMax = req.query.mxTemp
-  const tempMin = req.query.mnTemp
+router.post('/dataTemp', async function(req, res, next) {
+  const valueReq = {}
+  valueReq.valueMx = req.query.mxTemp
+  valueReq.valueMn = req.query.mnTemp
+
+  await ValueTemp.deleteMany()
+  await ValueTemp.insertMany(valueReq)
+
   res.sendStatus(200)
 })
 
 router.get('/user', function(req, res, next) {
-  console.log(req.query)
-  res.redirect('/control')
+  res.redirect('control')
 })
 
 

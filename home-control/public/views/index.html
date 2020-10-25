@@ -3,6 +3,7 @@
 <head>
     <script src="socket.io/socket.io.js"></script>
     <script type= "module" src="./javascripts/app.js"></script>
+    <script src="./javascripts/nav.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>    <script type="module" src="/javascripts/graphics.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +19,8 @@
         <nav class="navbar">
             <div class="logo">Home Control</div>
             <div class="nav">
-                <a href="./control" target="_parent" ><span>Control</span></a>
-                <a href="#head" target="_parent" ><span>Salir</span></a>
+                <nav class="nav-item" id="btn-control" >Control</nav>
+                <nav class="nav-item" id="btn-salir" >Salir</nav>
             </div>
         </nav>
     </header>

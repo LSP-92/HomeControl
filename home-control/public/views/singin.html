@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../javascripts/login.js"></script>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="https://img.icons8.com/nolan/64/monitor.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,14 @@
 </head>
 <body>
     <div class="contacto">
-            <h1>Reginstrate</h1>  
-            <form class="form" method="POST" action="/login">
+            <h1 class= "title">Nuevo Usuario</h1>  
+            <form class="form" method="POST" action="/singin">
                 <label for="email">Usuario</label>
                 <input type="email" name="email" id="email" required>
                 <label for="pass">Contraseña</label>
                 <input type="password" name="password" id="password" required>
-                <input type="submit" value="Iniciar sesión" >                       
+                <input type="submit" value="Enviar" >
+                <input type="button" class ="back" value="Volver..." >                          
             </form>
         </div>
     </div>

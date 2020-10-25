@@ -1,14 +1,17 @@
-
 'use strict'
-
 const mongoose = require('mongoose')
 
-// Definimos el esquema
+
 const adSchema = mongoose.Schema({
-  user: { type: String, required: true },
-  passwd: { type: String, required: true}
+    name: { type: String },
+    passwd: { type: String }
 })
 
+adSchema.statics.filter = function (user) {
+    const query = User.find(user)
+    return query.exec()
+}
 
 const User = mongoose.model('User', adSchema) 
+ 
 module.exports = User
