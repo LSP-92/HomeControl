@@ -55,3 +55,11 @@ export function renderChart (){
   }
 
 }
+
+/* async function readTemp() {
+  try {
+    const temperatura = await fetch(url api)
+  } catch (error) {
+    alert('Error en la conexión')
+  }
+} */

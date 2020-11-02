@@ -1,12 +1,15 @@
 const Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-const ch1 = new Gpio(5, 'out');
-const ch2 = new Gpio(6, 'out');
-const ch3 = new Gpio(13, 'out');
-const ch4 = new Gpio(16, 'out');
-const ch5 = new Gpio(19, 'out');
-const ch6 = new Gpio(20, 'out');
-const ch7 = new Gpio(21, 'out');
-const ch8 = new Gpio(26, 'out');
+
+
+ const ch1 = new Gpio(5, 'out')
+ const ch2 = new Gpio(6, 'out')
+ const ch3 = new Gpio(13, 'out')
+ const ch4 = new Gpio(16, 'out')
+ const ch5 = new Gpio(19, 'out')
+ const ch6 = new Gpio(20, 'out')
+ const ch7 = new Gpio(21, 'out')
+ const ch8 = new Gpio(26, 'out')
+
 
 
 function getState () {
@@ -24,16 +27,12 @@ function getState () {
   return state
 }
 
-function setRelayOn(arg) { //function to start blinking
-  if (arg.readSync() === 0) { //check the pin state, if the state is 0 (or off)
-    arg.writeSync(1); //set pin state to 1 (turn LED on)
-  }
+function setRelayOn(arg) {
+  new Gpio(arg, 'out').writeSync(1) //on
 }
 
-function setRelayOff(arg) { //function to start blinking
-    if (arg.readSync() === 1) { //check the pin state, if the state is 0 (or off)
-      arg.writeSync(0); //set pin state to 1 (turn LED on)
-    }
+function setRelayOff(arg) { 
+  new Gpio(arg, 'out').writeSync(0)  //off  
 }
 
-module.exports = {getState: getState }
+module.exports = {getState: getState, setRelayOn: setRelayOn, setRelayOff:setRelayOff  }

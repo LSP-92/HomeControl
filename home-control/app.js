@@ -10,7 +10,7 @@ const io = require('socket.io')(server)
 const session = require('express-session')
 const sessionAuth = require('./lib/checkCookie')
 
-/*const rpiRealys = require('./relayControl')*/  
+const rpiRealys = require('./lib/relayControls') 
 
 
 
@@ -25,7 +25,7 @@ app.use(session({
   resave: false,
   cookie: {
     secure: false,
-    maxAge: 1000 * 60 * 60 // 1 hora de inactividad
+    maxAge: 1000 * 60 * 60
   }
 }))
 
@@ -50,12 +50,19 @@ app.use('/temperatura', require('./routes/temp'))
 io.on('connection', (socket) => {
   console.log('A user connected')
   socket.on('relay', (msg) => {
-      console.log(msg)
-      let data = msg.split('%')      
-      /*rpiRealys.getState['channel'+data[1]] = parseInt(data[0])
-      console.log(rpiRealys.getState)*/
+
+      let data = msg.split('%')
+
+      if ( parseInt(data[0]) === 1) {
+        rpiRealys.setRelayOn(parseInt(data[1]))
+      }
+
+      if (parseInt(data[0]) === 0) {
+        rpiRealys.setRelayOff(parseInt(data[1]))
+      }
+
+      console.log(rpiRealys.getState())
   })
-  /*socket.on('stateRealy', () => socket.emit('stateRealy', rpiRealys.getState()))*/
 })
 
 
